@@ -37,4 +37,8 @@ const defaultTasks = [
   { id: '4', title: 'Something again', state: 'TASK_INBOX' },
 ];
 
-export default createStore(reducer, { tasks: defaultTasks });
+export default createStore(
+  reducer,
+  { tasks: defaultTasks },
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+);
