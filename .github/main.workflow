@@ -1,20 +1,15 @@
 workflow "Run visual regression tests" {
   on = "push"
-  resolves = [
-    "chromatic",
-    "install",
-  ]
-}
-
-action "chromatic" {
-  uses = "actions/npm@master"
-  args = "chromatic"
-  needs = [
-    "install",
-  ]
+  resolves = ["install"]
 }
 
 action "install" {
   uses = "actions/npm@master"
   args = "install"
+}
+
+action "chromatic" {
+  needs = ["install"]
+  uses = "actions/npm@master"
+  args = "run chromatic"
 }
