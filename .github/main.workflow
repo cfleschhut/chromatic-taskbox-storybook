@@ -1,6 +1,6 @@
 workflow "Run visual regression tests" {
   on = "push"
-  resolves = ["install"]
+  resolves = ["chromatic"]
 }
 
 action "install" {
