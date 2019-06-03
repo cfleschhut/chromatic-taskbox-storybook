@@ -1,3 +1,5 @@
+[![Netlify Status](https://api.netlify.com/api/v1/badges/66e09bf6-55d0-42d4-9e84-043e63b3c8f1/deploy-status)](https://chromatic-taskbox-storybook-cf.netlify.com/)
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
